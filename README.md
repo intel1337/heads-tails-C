@@ -8,7 +8,7 @@
 
 ## Description :
 
-<img src="https://img.shields.io/static/v1?label=C&color=purple?style=plastic"/>  
+<img src="https://img.shields.io/static/v1?label=C&message= &color=purple?style=plastic"/>  
 
 ```With Carder, you can quickly build a standout online presence that leaves a lasting impression. Whether you’re a designer, photographer, writer, or developer, this platform is tailored to help you create a sleek, custom portfolio that reflects your professional journey.```
 
