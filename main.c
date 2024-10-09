@@ -3,8 +3,6 @@
 #include <time.h>
 #include <string.h>
 #include <unistd.h>
-#include <sys/types.h>
-#include <sys/sysctl.h>
 #define BLK "\e[0;30m"
 #define RED "\e[0;31m"
 #define GRN "\e[0;32m"
@@ -48,9 +46,9 @@ int main(){
         }
         else if(strncmp(input,"3",1)==0){
             printf("Le but du jeu est de deviner pile ou face\n");
+            printf("Aucune règles précise hors de ca");
             printf("Vous gagnez si vous devinez correctement\n");
-            printf("Vous perdez si vous devinez incorrectement\n");
-            printf("Si vous arrivez à 10 pertes, vous perdez\n");
+            printf("Si vous arrivez à 10 lose, vous perdez\n");
             printf("Press Enter to continue\n");
             getchar();
             continue;
@@ -71,6 +69,11 @@ int main(){
         }
         else
             continue;
+        printf(".\n");
+        sleep(1);
+        printf("..\n");
+        sleep(1);
+        printf("...\n");
         printf("La pièce est jetée !\n");
         sleep(1);
         srand(time(NULL));
@@ -78,10 +81,10 @@ int main(){
         if(r == inp) {
             printf("Vous avez Gagné\n");
             win++;
-            if(r==PILE_NOMBRE){
+            if(inp==PILE_NOMBRE){
                 printf("Vous avez eu Pile\n");
             }
-            else if(r==FACE_NOMBRE){
+            else if(inp==FACE_NOMBRE){
                 printf("Vous avez eu Face\n");
             }
             printf("Press Enter to continue\n");
@@ -89,10 +92,10 @@ int main(){
         else{
             printf("Vous avez Perdu\n");
             lose++;
-            if(r==PILE_NOMBRE){
+            if(inp==PILE_NOMBRE){
                 printf("Vous avez eu Pile\n");
             }
-            else if(r==FACE_NOMBRE){
+            else if(inp==FACE_NOMBRE){
                 printf("Vous avez eu Face\n");
             }
             printf("Press Enter to continue\n");
