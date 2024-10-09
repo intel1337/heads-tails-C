@@ -79,7 +79,13 @@ int main(){
         srand(time(NULL));
         int r = (rand() % (FACE_NOMBRE - PILE_NOMBRE + 1)) + PILE_NOMBRE;
         if(r == inp) {
-            printf("Vous avez Gagné\n");
+            if(win>=1){
+                printf("Réussites");
+            }
+            else if(lose>=1){
+                printf("Réussites");
+            }
+            printf("Réussite !\n");
             win++;
             if(inp==PILE_NOMBRE){
                 printf("Vous avez eu Pile\n");
@@ -90,6 +96,12 @@ int main(){
             printf("Press Enter to continue\n");
         }
         else{
+            if(win>=1){
+                printf("Réussites");
+            }
+            else if(lose>=1){
+                printf("Réussites");
+            }
             printf("Vous avez Perdu\n");
             lose++;
             if(inp==PILE_NOMBRE){
