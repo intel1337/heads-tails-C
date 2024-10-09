@@ -35,13 +35,12 @@
             printf("%s                   Player%s@%spo%sf--%s#", WHT, GRN, MAG, MAG, WHT);
             fgets(input, MAX_LENGTH, stdin);
             printf("\n");
-            if(strncmp(input,"1",1)==0||strncmp(input,"pile",4)==0||strncmp(input,"PILE",4)==0||strncmp(input,"pILe",4)==0||strncmp(input,"p",1)==0){
+            if(strncmp(input,"1",1)==0||strncasecmp(input,"p",1)==0||strncasecmp(input,"pile",4)==0){
                 inp=PILE_NOMBRE;
             }
-            else if(strncmp(input,"2",1)==0||strncmp(input,"face",4)==0||strncmp(input,"FACE",4)==0||strncmp(input,"fACE",4)==0||strncmp(input,"f",1)==0){
+            else if(strncmp(input,"2",1)==0||strncasecmp(input,"f",1)==0||strncasecmp(input,"face",4)==0){
                 inp=FACE_NOMBRE;
-            }
-            else if(strncmp(input,"0",1)==0){
+            }else if(strncmp(input,"0",1)==0){
                 break;
             }
             else if(strncmp(input,"3",1)==0){
@@ -51,13 +50,11 @@
                 printf("Si vous arrivez à 10 lose, vous perdez\n");
                 printf("Press Enter to continue\n");
                 getchar();
-                continue;
             }
             else if(strncmp(input,"4",1)==0){
                 printf("Vous avez gagné %d fois et perdu %d fois\n", win, lose);
                 printf("Press Enter to continue\n");
                 getchar();
-                continue;
             }
             else if(strncmp(input,"5",1)==0){
                 printf("\n");
@@ -65,10 +62,8 @@
                 printf("github.com/intel1337\n");
                 printf("Press Enter to continue\n");
                 getchar();
-                continue;
+
             }
-            else
-                continue;
             printf(".\n");
             sleep(1);
             printf("..\n");
@@ -90,12 +85,16 @@
                 }
                 win++;
                 if(inp==PILE_NOMBRE){
-                    printf("Vous avez eu Pile\n");
+                    printf("Rappel :Vous avez choisi Pile\n");
+                    printf("Press Enter to continue\n");
+                    getchar();
                 }
                 else if(inp==FACE_NOMBRE){
-                    printf("Vous avez eu Face\n");
+                    printf("Rappel : Vous avez choisi Face\n");
+                    printf("Press Enter to continue\n");
+                    getchar();
                 }
-                printf("Press Enter to continue\n");
+    
             }
             else{
                 if(win>=1){
@@ -110,17 +109,22 @@
                 printf("Vous avez Perdu\n");
                 lose++;
                 if(inp==PILE_NOMBRE){
-                    printf("Vous avez eu Pile\n");
+                    printf("Rappel : Vous avez choisi Pile\n");
+                    printf("Press enter to continue");
+                    getchar();
                 }
+                
                 else if(inp==FACE_NOMBRE){
-                    printf("Vous avez eu Face\n");
+                    printf("Rappel : Vous avez choisi Face\n");
+                    printf("Press Enter to continue\n");
+                    getchar();
                 }
-                printf("Press Enter to continue\n");
             }
             if(lose==10){
                 printf("Game Over !\n");
+                getchar();
+                exit(0);
             }
-            getchar();
         }
         return 0;
     }
