@@ -19,6 +19,17 @@
 <img width="410" alt="image" src="https://github.com/user-attachments/assets/8bc98ca1-31df-49b2-87ee-f5a429eeb0ac">
 
 
+# Features
+
+- Répondre 1, pile, PILE, pILe ou même p permettent de jouer PILE
+- Répondre 2, face, FACE, fAcE ou même f permettent de jouer PILE
+- Répondre 0, quitter, quit, exit ou même q permettent de jouer PILE
+- SI le joueur saisi 0 pour quitter le jeu
+- SI le joueur atteint 10 echecs
+- Demande à l'utilisateur un coté :
+- 1 pour Pile
+- 2 pour Face.
+
 
 # Support 
 
