@@ -48,21 +48,17 @@
                 printf("Aucune règles précise hors de ca");
                 printf("Vous gagnez si vous devinez correctement\n");
                 printf("Si vous arrivez à 10 lose, vous perdez\n");
-                printf("Press Enter to continue\n");
-                getchar();
+                sleep(3);
             }
             else if(strncmp(input,"4",1)==0){
                 printf("Vous avez gagné %d fois et perdu %d fois\n", win, lose);
-                printf("Press Enter to continue\n");
-                getchar();
+                sleep(3);
             }
             else if(strncmp(input,"5",1)==0){
                 printf("\n");
                 printf("Crédits : \n");
                 printf("github.com/intel1337\n");
-                printf("Press Enter to continue\n");
-                getchar();
-
+                sleep(3);
             }
             printf(".\n");
             sleep(1);
@@ -75,9 +71,6 @@
             int r = (rand() % (FACE_NOMBRE - PILE_NOMBRE + 1)) + PILE_NOMBRE;
             if(r == inp) {
                 if(win>=1){
-                    printf("Réussites !");
-                }
-                else if(lose>=1){
                     printf("Réussites !");
                 }
                 else{
@@ -97,10 +90,7 @@
     
             }
             else{
-                if(win>=1){
-                    printf("Défaites !");
-                }
-                else if(lose>=1){
+                if(lose>=1){
                     printf("Défaites !");
                 }
                 else{
